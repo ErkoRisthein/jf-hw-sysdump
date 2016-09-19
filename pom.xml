@@ -135,6 +135,12 @@
               <skip>true</skip>
           </configuration>
         </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <configuration>
+            <argLine>-Xmx80m</argLine>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
