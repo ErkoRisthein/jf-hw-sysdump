@@ -3,18 +3,30 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ee.ut</groupId>
-  <artifactId>jf2016-hwX</artifactId>
+  <artifactId>jf-hw-packer</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>jf2016-hwX</name>
+  <name>jf-hw-packer</name>
   <url>https://github.com/zeroturnaround/jf-skeleton</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <repositories>
+    <repository>
+      <id>local-maven-repo</id>
+      <url>file:///${project.basedir}/local-maven-repo</url>
+    </repository>
+  </repositories>
+
   <dependencies>
+    <dependency>
+      <groupId>ee.ut</groupId>
+      <artifactId>jf-hw-packer-test-util</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -25,6 +37,16 @@
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
       <version>3.4</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.5</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.1.2</version>
     </dependency>
   </dependencies>
 
