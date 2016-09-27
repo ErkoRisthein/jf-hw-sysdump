@@ -4,7 +4,7 @@ Java Fundamentals - I/O 2 Homework
 Description
 ----------
 
-Your task is to write a Java program which packs and unpacks files without compression. Implement the following interface
+Your task is to write a Java program which outputs system info as XML and JSON files. Implement the following interface
 
 ```
 public interface SystemDump {
