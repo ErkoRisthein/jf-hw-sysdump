@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>ee.ut</groupId>
-  <artifactId>jf-hw-packer-test-util</artifactId>
+  <artifactId>jf-hw-sysdump-test-util</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <description>POM was created from install:install-file</description>
 </project>

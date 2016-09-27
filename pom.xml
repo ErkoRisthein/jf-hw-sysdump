@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ee.ut</groupId>
-  <artifactId>jf-hw-packer</artifactId>
+  <artifactId>jf-hw-sysdump</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>jf-hw-packer</name>
+  <name>jf-hw-sysdump</name>
   <url>https://github.com/zeroturnaround/jf-skeleton</url>
 
   <properties>
@@ -24,8 +24,18 @@
   <dependencies>
     <dependency>
       <groupId>ee.ut</groupId>
-      <artifactId>jf-hw-packer-test-util</artifactId>
+      <artifactId>jf-hw-sysdump-test-util</artifactId>
       <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.7</version>
+    </dependency>
+    <dependency>
+      <groupId>org.zeroturnaround</groupId>
+      <artifactId>zt-exec</artifactId>
+      <version>1.7</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
