@@ -21,7 +21,10 @@ public class RealXmlTest extends BaseTest {
   public static void init() throws Exception {
     file = Files.createTempFile("sysdump", ".xml");
     SystemDump dump = new SystemDumpImpl();
-    dump.writeXml(RealInfoFactory.getInfo(), file);
+    Info info = RealInfoFactory.getInfo();
+    // Remove the value with should be escaped
+    info.getSystemEnvironment().remove("PROMPT");
+    dump.writeXml(info, file);
     data = XmlParser.parse(file);
   }
 
