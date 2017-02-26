@@ -1,4 +1,4 @@
-package ee.ut.jf2016.sysdump.test;
+package org.zeroturnaround.jf.sysdump.test;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -7,11 +7,11 @@ import java.nio.file.Path;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
-import ee.ut.jf2016.sysdump.Info;
-import ee.ut.jf2016.sysdump.SystemDump;
-import ee.ut.jf2016.sysdump.SystemDumpImpl;
+import org.zeroturnaround.jf.sysdump.Info;
+import org.zeroturnaround.jf.sysdump.SystemDump;
+import org.zeroturnaround.jf.sysdump.SystemDumpImpl;
 
-public class SimpleXmlTest extends BaseTest {
+public class RealXmlTest extends BaseTest {
 
   private static Path file;
 
@@ -21,7 +21,10 @@ public class SimpleXmlTest extends BaseTest {
   public static void init() throws Exception {
     file = Files.createTempFile("sysdump", ".xml");
     SystemDump dump = new SystemDumpImpl();
-    dump.writeXml(SimpleInfoFactory.getInfo(), file);
+    Info info = RealInfoFactory.getInfo();
+    // Remove the value with should be escaped
+    info.getSystemEnvironment().remove("PROMPT");
+    dump.writeXml(info, file);
     data = XmlParser.parse(file);
   }
 
@@ -32,7 +35,7 @@ public class SimpleXmlTest extends BaseTest {
 
   @Override
   protected Info getExpected() {
-    return SimpleInfoFactory.getInfo();
+    return RealInfoFactory.getInfo();
   }
 
   @Override

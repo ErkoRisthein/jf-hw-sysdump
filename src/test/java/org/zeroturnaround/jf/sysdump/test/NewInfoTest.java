@@ -1,9 +1,9 @@
-package ee.ut.jf2016.sysdump.test;
+package org.zeroturnaround.jf.sysdump.test;
 
 import org.junit.BeforeClass;
 
-import ee.ut.jf2016.sysdump.Info;
-import ee.ut.jf2016.sysdump.SystemDumpImpl;
+import org.zeroturnaround.jf.sysdump.Info;
+import org.zeroturnaround.jf.sysdump.SystemDumpImpl;
 
 public class NewInfoTest extends BaseTest {
 

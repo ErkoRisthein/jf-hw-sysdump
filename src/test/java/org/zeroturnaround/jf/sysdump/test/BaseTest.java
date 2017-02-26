@@ -1,11 +1,11 @@
-package ee.ut.jf2016.sysdump.test;
+package org.zeroturnaround.jf.sysdump.test;
 
 import java.util.ArrayList;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import ee.ut.jf2016.sysdump.Info;
+import org.zeroturnaround.jf.sysdump.Info;
 
  abstract class BaseTest {
 

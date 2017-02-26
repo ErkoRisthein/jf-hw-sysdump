@@ -1,4 +1,4 @@
-package ee.ut.jf2016.sysdump.test;
+package org.zeroturnaround.jf.sysdump.test;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -9,9 +9,9 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
 import com.google.gson.Gson;
-import ee.ut.jf2016.sysdump.Info;
-import ee.ut.jf2016.sysdump.SystemDump;
-import ee.ut.jf2016.sysdump.SystemDumpImpl;
+import org.zeroturnaround.jf.sysdump.Info;
+import org.zeroturnaround.jf.sysdump.SystemDump;
+import org.zeroturnaround.jf.sysdump.SystemDumpImpl;
 
 public class RealJsonTest extends BaseTest {
 

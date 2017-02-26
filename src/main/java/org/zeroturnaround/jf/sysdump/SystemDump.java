@@ -1,4 +1,4 @@
-package ee.ut.jf2016.sysdump;
+package org.zeroturnaround.jf.sysdump;
 
 import java.nio.file.Path;
 

@@ -1,32 +1,28 @@
-package ee.ut.jf2016.sysdump.test;
+package org.zeroturnaround.jf.sysdump.test;
 
 import java.io.IOException;
-import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
-import com.google.gson.Gson;
-import ee.ut.jf2016.sysdump.Info;
-import ee.ut.jf2016.sysdump.SystemDump;
-import ee.ut.jf2016.sysdump.SystemDumpImpl;
+import org.zeroturnaround.jf.sysdump.Info;
+import org.zeroturnaround.jf.sysdump.SystemDump;
+import org.zeroturnaround.jf.sysdump.SystemDumpImpl;
 
-public class SimpleJsonTest extends BaseTest {
+public class SimpleXmlTest extends BaseTest {
 
   private static Path file;
 
-  private static InfoImpl data;
+  private static Info data;
 
   @BeforeClass
   public static void init() throws Exception {
-    file = Files.createTempFile("sysdump", ".json");
+    file = Files.createTempFile("sysdump", ".xml");
     SystemDump dump = new SystemDumpImpl();
-    dump.writeJson(SimpleInfoFactory.getInfo(), file);
-    try (Reader reader = Files.newBufferedReader(file)) {
-      data = new Gson().fromJson(reader, InfoImpl.class);
-    }
+    dump.writeXml(SimpleInfoFactory.getInfo(), file);
+    data = XmlParser.parse(file);
   }
 
   @AfterClass
