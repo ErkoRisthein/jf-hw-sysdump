@@ -1,7 +1,6 @@
 package org.zeroturnaround.jf.sysdump;
 
 import java.nio.file.Path;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
