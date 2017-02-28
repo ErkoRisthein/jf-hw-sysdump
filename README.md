@@ -98,11 +98,11 @@ Example XML
 
 Various tips
 -------------
-1. You can use JAXB to output XML, but due to the way tests are built you then need to wrap the Info object passed to SystemDump::writeXml with your own JAXB annotated class and then
+1. You can use JAXB to output XML, but due to the way tests are built you then need to wrap the Info object passed to `SystemDump::writeXml` with your own JAXB annotated class and then
 delegate all of the calls to get the data to the wrapped object. Otherwise you can get the following exception:
    ```javax.xml.bind.JAXBException: class org.zeroturnaround.jf.sysdump.test.InfoImpl nor any of its super class is known to this context.```
    
-   This is actually a well known pattern in Java called Decorators. For more info on decorators you can read [this blog post](http://www.yegor256.com/2015/02/26/composable-decorators.html). You can apply the same principle to have a decorator with JAXB annotations.
+   This is actually a well known design pattern called Decorators. For more info on decorators you can read [this blog post](http://www.yegor256.com/2015/02/26/composable-decorators.html). You can apply the same principle to have a decorator with JAXB annotations.
 2. If you want to build the distribution zip without fixing the tests, then you can do that by skipping tests in the build by adding -DskipTests to the command:
    ```shell
    ./mvnw clean deploy -DskipTests
